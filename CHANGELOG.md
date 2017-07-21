@@ -64,6 +64,10 @@
   [Marcelo Fabri](https://github.com/marcelofabri)
   [#1483](https://github.com/realm/SwiftLint/issues/1483)
 
+* Shebang (`#!`) in the beginning of a file is now ignored by all rules.  
+  [Marcelo Fabri](https://github.com/marcelofabri)
+  [#1294](https://github.com/realm/SwiftLint/issues/1294)
+
 ##### Bug Fixes
 
 * Fix false positive on `redundant_discardable_let` rule when using

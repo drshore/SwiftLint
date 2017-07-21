@@ -205,6 +205,11 @@ class RulesTests: XCTestCase {
 #if !swift(>=3.2)
         // Test crashes SourceKit with Swift 3.2 or later
         verifyRule(OperatorUsageWhitespaceRule.description)
+
+        let description = OperatorUsageWhitespaceRule.description
+            .with(nonTriggeringExamples: ["#!/usr/bin/env swift\n"])
+            .with(triggeringExamples: []).with(corrections: [:])
+        verifyRule(description, skipCommentTests: true, skipStringTests: true, testMultiByteOffsets: false)
 #endif
     }
 
